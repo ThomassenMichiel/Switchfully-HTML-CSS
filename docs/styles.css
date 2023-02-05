@@ -51,3 +51,10 @@ p {
 .hidden {
     color: rgb(230, 230, 230);
 }
+
+@media only screen and (min-width: 900px){
+    .container {
+        width: 900px;
+        margin: 0 auto;
+    }
+}

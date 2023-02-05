@@ -32,12 +32,12 @@
         return false;
     }
     slider.oninput = function () {
-        display.innerHTML = this.value;
+        display.innerHTML = "Your guess is: " + this.value;
         if (this.value.includes("485")) {
             display.innerHTML += "<br>";
             display.innerHTML += "<p>Getting close!</p>"
-            if (Math.floor(Math.random() * 100) === 1) {
-                display.innerHTML = "<p>This is probably my number!</p>"
+            if (Math.floor(Math.random() * 100) === 1 ) {
+                display.innerHTML += "<p>This is probably my number!</p>"
             }
         }
     }
