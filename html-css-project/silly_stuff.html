@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Silly stuff</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!-- why am I getting punished for my irrational choice of screen setup? -->
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="button">Home</a>
+    <a href="hobbies.html" class="button">Hobbies</a>
+    <a href="silly_stuff.html" class="button">Silly stuff</a>
+</nav>
+
+<div class="container">
+    <h1>Select my phone number!</h1>
+    <label for="slider">Phone number</label>
+    <input id="slider" type="range" min="1" max="9999999999" value="0">
+    <h2 id="number-guess">Your guess is: </h2>
+</div>
+
+</body>
+</html>
+<script>
+    const slider = document.getElementById("slider");
+    const display = document.getElementById("number-guess");
+    slider.onkeydown = function () {
+        alert("Try turning down your mouse DPI instead");
+        return false;
+    }
+    slider.oninput = function () {
+        display.innerHTML = this.value;
+        if (this.value.includes("485")) {
+            display.innerHTML += "<br>";
+            display.innerHTML += "<p>Getting close!</p>"
+            if (Math.floor(Math.random() * 100) === 1) {
+                display.innerHTML = "<p>This is probably my number!</p>"
+            }
+        }
+    }
+</script>
+<noscript>You're no fun. :(</noscript>
